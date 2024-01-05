@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".refine.RefineActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_your_availability"
+                android:textColor="@color/appColor"
+                android:textSize="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"/>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:textSize="@dimen/_12sdp"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_your_status"
+                android:textColor="@color/appColor"
+                android:textSize="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"/>
+
+            <EditText
+                android:id="@+id/editTextRefine"
+                android:text="Hi community! I am open to new connections"
+                android:textColor="@color/appColor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:padding="@dimen/_2sdp"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:background="@drawable/edit_text_bg"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_hyper_local_distance"
+                android:textColor="@color/appColor"
+                android:textSize="@dimen/_18sdp"
+                android:layout_margin="@dimen/_20sdp"/>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:stepSize="1"
+                android:value="1"
+                android:valueFrom="1"
+                android:valueTo="100"
+                app:labelBehavior="floating"
+                app:haloColor="@color/appColor"
+                app:haloRadius="@dimen/_1sdp"
+                app:trackColor="@color/appColor"
+                app:thumbColor="@color/appColor"
+                app:tickColor="@color/appColor"
+                app:thumbElevation="@dimen/_7sdp"
+                app:labelStyle="@drawable/slider_label_style" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 km"
+                    android:textSize="@dimen/_16sdp"
+                    android:textColor="@color/appColor"
+                    android:layout_marginStart="@dimen/_20sdp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100 km"
+                    android:textSize="@dimen/_16sdp"
+                    android:textColor="@color/appColor"
+                    android:layout_marginStart="@dimen/_185sdp"/>
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_purpose"
+                android:textColor="@color/appColor"
+                android:textSize="@dimen/_18sdp"
+                android:layout_margin="@dimen/_20sdp"/>
+
+            <include layout="@layout/buttons_grid"/>
+
+
+
+
+
+
+            <Button
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:textAllCaps="false"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:text="@string/save_and_explore"
+                android:background="@drawable/button_style"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+</FrameLayout>
